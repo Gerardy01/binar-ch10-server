@@ -35,6 +35,7 @@ app.post('/api/upload', async (req, res) => {
 });
 
 
-app.listen(8000, () => {
-    console.log('server berjalan di port 8000')
+// default heroku port
+app.listen(process.env.PORT || 8000, () => {
+    console.log('server berjalan')
 });
